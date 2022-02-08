@@ -21,7 +21,6 @@ public class Weather {
 
         ;
 
-        // Сегментированное построение URL
         HttpUrl url = new HttpUrl.Builder()
 
                 .scheme("http")
@@ -38,13 +37,12 @@ public class Weather {
 
         System.out.println(url.toString());
 
-        // При необходимости указать заголовки
-        Request requesthttp = new Request.Builder()
+        Request requestHttp = new Request.Builder()
                 .addHeader("accept", "application/json")
                 .url(url)
                 .build();
 
-        String jsonResponse = client.newCall(requesthttp).execute().body().string();
+        String jsonResponse = client.newCall(requestHttp).execute().body().string();
         System.out.println(jsonResponse);
     }
 }
