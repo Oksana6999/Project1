@@ -2,6 +2,7 @@ package WeatherApp;
 
 public final class ApplicationGlobalState {
 
+    private static final String DB_FILENAME = "application.db";
     private static ApplicationGlobalState INSTANCE;
     private String selectedCity = null;
     private final String API_KEY = "PY8GyFjaE4bMq9op53sHAQ22hOUc8oH8";
@@ -26,5 +27,9 @@ public final class ApplicationGlobalState {
 
     public String getAPI_KEY () {
         return this.API_KEY;
+    }
+
+    public String getDbFileName() {
+        return DB_FILENAME;
     }
 }
